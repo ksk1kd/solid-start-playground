@@ -7,12 +7,16 @@ export default function App() {
   return (
     <main>
       <h1>Hello world!</h1>
-      <button class="increment" onClick={() => setCount(count() + 1)} type="button">
+      <button
+        class="increment"
+        onClick={() => setCount(count() + 1)}
+        type="button"
+      >
         Clicks: {count()}
       </button>
       <p>
         Visit{" "}
-        <a href="https://start.solidjs.com" target="_blank">
+        <a href="https://start.solidjs.com" target="_blank" rel="noreferrer">
           start.solidjs.com
         </a>{" "}
         to learn how to build SolidStart apps.
