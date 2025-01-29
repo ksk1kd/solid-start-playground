@@ -1,4 +1,6 @@
+import { Title } from "@solidjs/meta";
 import { createAsync, query, useParams } from "@solidjs/router";
+import { Show } from "solid-js";
 
 type Blog = { title: string; id: string };
 
@@ -19,5 +21,12 @@ export default function BlogDetail() {
   const params = useParams();
   const blog = createAsync(() => getBlog(params.id));
 
-  return <h1>{blog()?.title}</h1>;
+  return (
+    <>
+      <Show when={blog()}>
+        <Title>{blog()?.title} | Blog</Title>
+        <h1>{blog()?.title}</h1>
+      </Show>
+    </>
+  );
 }

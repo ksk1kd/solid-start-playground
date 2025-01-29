@@ -1,3 +1,4 @@
+import { Title } from "@solidjs/meta";
 import { createAsync, query } from "@solidjs/router";
 import { For } from "solid-js";
 
@@ -18,6 +19,7 @@ export default function BlogList() {
 
   return (
     <>
+      <Title>Blog</Title>
       <h1>Blog List</h1>
       <ul>
         <For each={blogs()}>
