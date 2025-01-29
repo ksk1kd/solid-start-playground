@@ -5,5 +5,6 @@ export default defineConfig({
     prerender: {
       routes: ["/", "/blog"]
     }
-  }
+  },
+  middleware: "./src/middleware.ts",
 });
